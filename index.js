@@ -240,9 +240,21 @@ Aşağıdakileri yapmak için fenomenEkle'i kullanın:
 
 ÖRNEK: fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram") çağrıldığında dizinin sonuna yukarıdaki nesne en sona eklenerek yeni fenomenler dizisini döndürmelidir. */
 
-function fenomenEkle(/*kod*/) {
-  /*kod*/
+const newArray=[];
+function fenomenEkle(fenomenlerBolumu,sayilar,profil,takipci,gonderiler,uygulamaAdi) {
+  const newArray=[...fenomenlerBolumu];
+  newArray.push({
+    "number": sayilar,
+    "profile": profil,
+    "followers": takipci,
+    "posts": gonderiler,
+    "platform": uygulamaAdi,
+  }
+  )
+  return newArray; 
 }
+fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram");
+console.log(newArray);
 
 
 /* Görev 7:
